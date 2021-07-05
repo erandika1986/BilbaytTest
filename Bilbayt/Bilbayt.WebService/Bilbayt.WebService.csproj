@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Bilbayt.Business\Bilbayt.Business.csproj" />
+    <ProjectReference Include="..\Bilbayt.Data\Bilbayt.Data.csproj" />
+    <ProjectReference Include="..\Bilbayt.Model\Bilbayt.Model.csproj" />
+    <ProjectReference Include="..\Bilbayt.ViewModel\Bilbayt.ViewModel.csproj" />
+  </ItemGroup>
+
+</Project>
