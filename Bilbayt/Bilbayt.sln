@@ -3,15 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31410.357
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bilbayt.Business", "Bilbayt.Business\Bilbayt.Business.csproj", "{FA30E900-0FA2-40AF-BC56-DEB0782DD4AB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bilbayt.Business", "Bilbayt.Business\Bilbayt.Business.csproj", "{FA30E900-0FA2-40AF-BC56-DEB0782DD4AB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bilbayt.WebService", "Bilbayt.WebService\Bilbayt.WebService.csproj", "{C35BBCCC-DD21-4055-A7E0-CA358443D0F2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bilbayt.Data", "Bilbayt.Data\Bilbayt.Data.csproj", "{19015381-464A-405C-AC90-ACF598433FAA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bilbayt.Data", "Bilbayt.Data\Bilbayt.Data.csproj", "{19015381-464A-405C-AC90-ACF598433FAA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bilbayt.Model", "Bilbayt.Model\Bilbayt.Model.csproj", "{B8965167-272C-4A92-B35E-B4AB915FFA28}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bilbayt.Model", "Bilbayt.Model\Bilbayt.Model.csproj", "{B8965167-272C-4A92-B35E-B4AB915FFA28}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bilbayt.ViewModel", "Bilbayt.ViewModel\Bilbayt.ViewModel.csproj", "{70B02C81-B992-403B-8174-7BD667D461BA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bilbayt.ViewModel", "Bilbayt.ViewModel\Bilbayt.ViewModel.csproj", "{70B02C81-B992-403B-8174-7BD667D461BA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bilbayt.WebApi", "Bilbayt.WebApi\Bilbayt.WebApi.csproj", "{98FA34EF-FCC2-4ED9-80A9-C68959E481DE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bilbayt.UnitTest", "Bilbayt.UnitTest\Bilbayt.UnitTest.csproj", "{5FAD5E31-8DD2-456D-9E6A-9998BB8C1205}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +25,6 @@ Global
 		{FA30E900-0FA2-40AF-BC56-DEB0782DD4AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FA30E900-0FA2-40AF-BC56-DEB0782DD4AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FA30E900-0FA2-40AF-BC56-DEB0782DD4AB}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C35BBCCC-DD21-4055-A7E0-CA358443D0F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C35BBCCC-DD21-4055-A7E0-CA358443D0F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C35BBCCC-DD21-4055-A7E0-CA358443D0F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C35BBCCC-DD21-4055-A7E0-CA358443D0F2}.Release|Any CPU.Build.0 = Release|Any CPU
 		{19015381-464A-405C-AC90-ACF598433FAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{19015381-464A-405C-AC90-ACF598433FAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{19015381-464A-405C-AC90-ACF598433FAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -39,6 +37,14 @@ Global
 		{70B02C81-B992-403B-8174-7BD667D461BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{70B02C81-B992-403B-8174-7BD667D461BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{70B02C81-B992-403B-8174-7BD667D461BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{98FA34EF-FCC2-4ED9-80A9-C68959E481DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98FA34EF-FCC2-4ED9-80A9-C68959E481DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98FA34EF-FCC2-4ED9-80A9-C68959E481DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98FA34EF-FCC2-4ED9-80A9-C68959E481DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5FAD5E31-8DD2-456D-9E6A-9998BB8C1205}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5FAD5E31-8DD2-456D-9E6A-9998BB8C1205}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5FAD5E31-8DD2-456D-9E6A-9998BB8C1205}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5FAD5E31-8DD2-456D-9E6A-9998BB8C1205}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
