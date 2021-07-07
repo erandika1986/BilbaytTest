@@ -1,0 +1,3 @@
+1. Run the ASP.NET Core web api application ("Bilbayt.WebApi") using VS 2019
+2. Go to "clientApp\BilbaytTestApp" folder using the command prompt and run 'ng serve' command.
+3. Go to localhost:4200  using web browser to view the angular application. 
