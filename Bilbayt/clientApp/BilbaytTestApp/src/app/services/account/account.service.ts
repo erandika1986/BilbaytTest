@@ -8,6 +8,7 @@ import { environment } from 'src/environments/environment';
 import { map } from 'rxjs/operators';
 import { AuthResultModel } from 'src/app/models/Account/auth.result.model';
 import { RegisterRequestModel } from 'src/app/models/Account/register.request.model';
+import { ResponseModel } from 'src/app/models';
 
 @Injectable({
   providedIn: 'root'
@@ -32,7 +33,7 @@ export class AccountService {
 
   }
 
-    login(loginVm:LoginModel) {
+    login(loginVm:LoginModel) :Observable<AuthResultModel>{
       return this.http.post<AuthResultModel>(`${environment.apiUrl}Account/login`, loginVm)
           .pipe(map(response => {
               localStorage.setItem('currentUser', JSON.stringify(response));
@@ -49,7 +50,7 @@ export class AccountService {
   }
 
 
-  register(user: RegisterRequestModel) {
-    return this.http.post(`${environment.apiUrl}Account/register`, user);
+  register(user: RegisterRequestModel):Observable<ResponseModel> {
+    return this.http.post<ResponseModel>(`${environment.apiUrl}Account/register`, user);
 }
 }
