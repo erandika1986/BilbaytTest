@@ -11,17 +11,20 @@ using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.IdentityModel.Tokens;
+using Bilbayt.ViewModel.Common;
 
 namespace Bilbayt.Business
 {
   public class AccountService : IAccountService
   {
     private readonly IUserContext userContext;
+    private readonly ISendGridEmailManager sendGridEmailManager;
     private readonly ITokenSettings settings;
 
-    public AccountService(IUserContext userContext, ITokenSettings settings)
+    public AccountService(IUserContext userContext, ISendGridEmailManager sendGridEmailManager, ITokenSettings settings)
     {
       this.userContext = userContext;
+      this.sendGridEmailManager = sendGridEmailManager;
       this.settings = settings;
     }
 
@@ -84,6 +87,8 @@ namespace Bilbayt.Business
 
         user = await userContext.SaveAsync(user);
 
+        await SendRegistrationSuccessEmail(user);
+
         response.IsSuccess = true;
         response.Message = "User has registered successfully.";
       }
@@ -123,5 +128,20 @@ namespace Bilbayt.Business
 
       return tokenString;
     }
+
+    private async Task SendRegistrationSuccessEmail(User user)
+    {
+      var email = new EmailMessage()
+      {
+        HtmlEmailBody = "<b>Thanks for registering with us and Welcome to Bilbayt test</b>",
+        PainTextEmailBody = "Thanks for registering with us and Welcome to Bilbayt test",
+        Subject = "Registration success"
+      };
+
+      email.ToUsers.Add(new SendGrid.Helpers.Mail.EmailAddress() { Email = user.Username, Name = user.FullName });
+
+      await sendGridEmailManager.SendSingleEmail(email);
+    }
   }
+
 }

@@ -25,6 +25,10 @@ namespace Bilbayt.WebApi.Infrastructure
           .As<IHttpContextAccessor>()
           .SingleInstance();
 
+      builder.RegisterType<SendGridEmailManager>()
+        .As<ISendGridEmailManager>()
+        .SingleInstance();
+
       builder.RegisterType<IdentityService>()
         .As<IIdentityService>()
         .InstancePerLifetimeScope();

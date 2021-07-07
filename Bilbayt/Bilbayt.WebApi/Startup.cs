@@ -107,11 +107,17 @@ namespace Bilbayt.WebApi
       services.Configure<TokenSettings>
           (configuration.GetSection(nameof(TokenSettings)));
 
+      services.Configure<SendGridSettings>
+        (configuration.GetSection(nameof(SendGridSettings)));
+
       services.AddSingleton<IBilbaytDatabaseSettings>(sp =>
           sp.GetRequiredService<IOptions<BilbaytDatabaseSettings>>().Value);
 
       services.AddSingleton<ITokenSettings>(sp =>
         sp.GetRequiredService<IOptions<TokenSettings>>().Value);
+
+      services.AddSingleton<ISendGridSettings>(sp =>
+        sp.GetRequiredService<IOptions<SendGridSettings>>().Value);
 
       return services;
     }
