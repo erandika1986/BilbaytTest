@@ -25,6 +25,10 @@ namespace Bilbayt.WebApi.Infrastructure
           .As<IHttpContextAccessor>()
           .SingleInstance();
 
+      builder.RegisterType<IdentityService>()
+        .As<IIdentityService>()
+        .InstancePerLifetimeScope();
+
       builder.RegisterType<UserContext>()
         .As<IUserContext>()
         .InstancePerLifetimeScope();

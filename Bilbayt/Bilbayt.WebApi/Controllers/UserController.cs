@@ -1,4 +1,5 @@
 using Bilbayt.Business.Interfaces;
+using Bilbayt.WebApi.Infrastructure;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -15,17 +16,20 @@ namespace Bilbayt.WebApi.Controllers
   public class UserController : ControllerBase
   {
     private readonly IUserService userService;
+    private readonly IIdentityService identityService;
 
-    public UserController(IUserService userService)
+    public UserController(IUserService userService, IIdentityService identityService)
     {
       this.userService = userService;
+      this.identityService = identityService;
     }
 
 
-    [HttpGet("{id}")]
-    public ActionResult Get(string id)
+    [HttpGet]
+    public ActionResult Get()
     {
-      var response = userService.GetUserById(id);
+      var userName = identityService.GetUserName();
+      var response = userService.GetUserByUsername(userName);
       return Ok(response);
     }
 

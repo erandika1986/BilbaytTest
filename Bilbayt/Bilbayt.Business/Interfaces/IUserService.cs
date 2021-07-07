@@ -9,6 +9,6 @@ namespace Bilbayt.Business.Interfaces
 {
   public interface IUserService
   {
-    UserViewModel GetUserById(string id);
+    UserViewModel GetUserByUsername(string userName);
   }
 }

@@ -21,9 +21,9 @@ namespace Bilbayt.Business
       this.userContext = userContext;
     }
 
-    public UserViewModel GetUserById(string id)
+    public UserViewModel GetUserByUsername(string userName)
     {
-      var user = userContext.FindUserById(id);
+      var user = userContext.FindByUsername(userName);
       var response = new UserViewModel()
       {
         Id = user.Id,
